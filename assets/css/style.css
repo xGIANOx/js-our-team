@@ -102,9 +102,17 @@ body {
     display: flex;
   }
   
-  .col.even{
+.col.even{
     display: flex;
     justify-content: end;
   }
+
+.team_member{
+    display: flex;
+} 
+
+.team_member.even{
+    flex-direction: row-reverse;
+} 
 
 

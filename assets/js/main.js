@@ -36,23 +36,23 @@ for (let i = 0; i < team.length; i++) {
     const thisMember = team[i];
     console.log(thisMember);
     const orderClass = i % 2 === 0 ? 'odd' : 'even'; // add order class to alternate cards
-    const markup = `
+    const markup = `<div class="team_member ${orderClass}">
     <div class="col pb-5 ${orderClass}">
-        <div class="card border-0 text-center bg-black text-white">
-            <img src="${thisMember.img}" alt="">
-            <div class="card-body ${orderClass}">
-                <h3>
-                    ${thisMember.name} 
-                </h3>
-                <p>
-                    ${thisMember.role}
-                </p>
-            </div>
-            
+    <div class="card border-0 text-center bg-black text-white">
+        <img src="${thisMember.img}" alt="">
+        <div class="card-body ${orderClass}">
+            <h3>
+                ${thisMember.name} 
+            </h3>
+            <p>
+                ${thisMember.role}
+            </p>
         </div>
+        
     </div>
-    <div class="col pb-5 text-white align-items-center d-flex fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at neque illo dolore ullam illum dolores a id, consequuntur ea aliquam eligendi iure quas repellendus inventore possimus nam error doloribus.
-    </div>`
+</div>
+<div class="col pb-5 text-white align-items-center d-flex fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at neque illo dolore ullam illum dolores a id, consequuntur ea aliquam eligendi iure quas repellendus inventore possimus nam error doloribus.
+</div></div>`
     rowEl.innerHTML += markup
 }
 
